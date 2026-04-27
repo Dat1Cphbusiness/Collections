@@ -28,7 +28,6 @@ public class Student implements Comparable{
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
         return id == student.id && Objects.equals(name, student.name);
@@ -57,8 +56,8 @@ public class Student implements Comparable{
             return 0;
         else if(o == null || getClass() != o.getClass())
             return 1;
-        else if(this.name.compareTo(((Student) o).name) != 0)
-            return this.name.compareTo(((Student) o).name);
+       /* else if(this.name.compareTo(((Student) o).name) != 0)
+            return this.name.compareTo(((Student) o).name);*/
         else if(this.id > ((Student) o).id)
             return 1;
         else if(this.id < ((Student)o).id)
