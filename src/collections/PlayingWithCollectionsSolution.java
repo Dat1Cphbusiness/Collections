@@ -10,9 +10,17 @@ public class PlayingWithCollectionsSolution {
 
     public static void main(String[] args) {
        playWithLists();
+
+
  //     playWithSet();
   //     playWithMaps();
    //    searchTimes();
+    }
+
+    public static void printMyList(List<Student> list){
+        for(Student s: list){
+            // print
+        }
     }
 
     public static void playWithLists(){

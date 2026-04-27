@@ -52,16 +52,16 @@ public class DataReader {
     }
 
     public static void fillWithStudents(Collection<Student> collection, int amount){
-
+        Random random = new Random();
         for(int i = 0; i < amount; i++){
-                collection.add(new Student(studentNames.get(i % studentNames.size()), i));
+                collection.add(new Student(studentNames.get(random.nextInt(studentNames.size())), i));
         }
     }
 
     public static void fillWithStudentsAndCourses(Map<Student, Course> map, int amount){
         Random random = new Random();
         for(int i = 0; i < amount; i++){
-            map.put(new Student(studentNames.get(i % studentNames.size()), i), courses.get(random.nextInt(courses.size())));
+            map.put(new Student(studentNames.get(random.nextInt(studentNames.size())), i), courses.get(random.nextInt(courses.size())));
         }
     }
 }
